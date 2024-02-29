@@ -1,4 +1,4 @@
-
+I made a mistake by not being able to watch the tutorial that my adviser sent as a video for our references. I utilized asp.net core web application (net framework) for this website. It should be an Asp.net core web app (Model-view-controller). If you want to see my work using that model-view controller, please click this link.
 Screenshots
 
  1:
