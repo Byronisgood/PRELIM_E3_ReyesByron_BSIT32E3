@@ -1,0 +1,37 @@
+﻿/* styles.css */
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav {
+    gap: 4rem;
+    margin-top: 20px;
+}
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        color: white;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        letter-spacing: 2px;
+    }
+
+.nav-item .nav-link {
+    color: white;
+}
+
+.container.body-content {
+    margin-top: 90px;
+}
+
+footer {
+    margin-top: 450px;
+    text-align: center;
+    color: white;
+}

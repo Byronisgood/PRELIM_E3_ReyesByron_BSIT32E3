@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PRELIM_E3_ReyesByron_BSIT32E3.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link href="~/Content/styles.css" rel="stylesheet" />
+    <title><%: Page.Title %> - My schedule</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5uEY4RQUnn+pvs5K1gpXRE5xyi1nUeIX5L9i4PKg/kXbTl+aaZ8eWTfSgJl3" crossorigin="anonymous" />
+
+<style>
+    .navbar {
+        background-color: transparent !important;
+              font-size: 1.2rem;
+      color: white;
+         font-family: 'Bebas Neue', sans-serif;
+ font-weight: 100;
+ font-style: normal;
+ letter-spacing:2px;
+ z-index: 1;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+              margin-top: 30px;
+              margin-left:-13px;
+    }
+
+    .navbar-nav {
+        gap: 6rem;
+        margin-top: 30px;
+    }
+
+    .navbar-nav .nav-link {
+
+           background-color: transparent !important;
+              font-size: 1.2rem;
+      color: white;
+         font-family: 'Bebas Neue', sans-serif;
+ font-weight: 100;
+ font-style: normal;
+ letter-spacing:2px;
+ z-index: 1;
+    }
+
+    .nav-item .nav-link {
+        color: white;
+    }
+
+    .container.body-content {
+        margin-top: 90px;
+    }
+
+    footer {
+        margin-top: 450px;
+        text-align: center;
+        color: white;
+    }
+</style>
+
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/">My Project 1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/schedule">Schedule</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+       
+      
+        </div>
+
+        <!-- Bootstrap JS Script -->
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/Scripts/bootstrap.bundle.min.js") %>
+        </asp:PlaceHolder>
+    </form>
+</body>
+</html>
